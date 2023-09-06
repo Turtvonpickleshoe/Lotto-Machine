@@ -1,0 +1,154 @@
+@font-face {
+    font-family: alarm;
+    src: url(alarm.ttf);
+  }
+
+  @keyframes glowing {
+  0% {
+    text-shadow: 0  0px 10px #00ff00;
+  }
+  100% {
+    text-shadow: 0 0 30px #00ff00;
+  }
+}
+
+body {
+  background-image: url("skyline.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /*background: linear-gradient(to bottom right, purple, blue, green);*/
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  
+}
+/*
+.glass-element {
+  background: background: linear-gradient(to bottom right, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, .2));
+  border-radius: 33px;
+  animation: glowing 1s ease-in-out infinite alternate;
+  color: darkseagreen;
+  padding: 16px;
+  text-shadow: 1px 1px 2px black;
+  backdrop-filter: blur(4px);
+  width: 340px;
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 65px;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px #333;
+  margin: 0 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1frr;
+  justify-content: center;
+  height: 100vh;
+}
+*/
+.hero {
+  background-color: rgb(34, 32, 32);
+  width: 300px;
+  height: 320px;
+  border-radius: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 2.5rem;
+  box-shadow: 0 0 20px #220a7a;
+  color: whitesmoke
+
+}
+
+.glass-element {
+  background: linear-gradient(to bottom right, rgba(0, 0, 255, 0.5), rgba(0, 0, 255, .2));
+  border-radius: 33px;
+  animation: glowing .5s ease-in-out infinite alternate;
+  color: darkseagreen;
+  padding: 16px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-shadow: 1px 1px 2px black;
+  backdrop-filter: blur(4px);
+  width: 420px;
+  height: 56px;
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 38px;
+  /*border: 1px solid #333;*/
+  box-shadow: 0 0 20px #333;
+  font-family: alarm;
+}
+.glass-element:hover {
+  box-shadow:  0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  height: 80vh;
+  margin-top: 2.5rem;
+
+}
+#button {
+ border-radius: 1rem;
+}
+
+  @media screen and (max-width: 767px) {
+  .glass-element {
+    width: 18rem; /* Adjust width to fit the screen */
+    font-size: 26px; /* Decrease font size for better readability */
+    padding: 8px; /* Decrease padding for a more compact layout */
+
+  }
+  span {
+  margin-right: 8px;
+  }
+}
+ 
+ @media screen and (max-height: 450px) {
+    .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+span {
+  margin-right: 18px;
+  display: inline-block;
+}
+.glass-element span {
+  transition: transform 1s ease-in-out;
+}
+
+  
+
+
+.animate {
+  animation-duration: 2s;
+  transition-delay: .2s;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate(-200%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
